@@ -129,15 +129,23 @@
   <ItemGroup>
     <ClCompile Include="DoubleLinkLoopList.cpp" />
     <ClCompile Include="LinkLoopList.cpp" />
+    <ClCompile Include="LinkQueue.cpp" />
+    <ClCompile Include="LinkStack.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="seqLinkList.cpp" />
+    <ClCompile Include="SeqStack.cpp" />
     <ClCompile Include="seqTable.cpp" />
     <ClCompile Include="seqTable.h" />
+    <ClCompile Include="SeQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DoubleLinkLoopList.h" />
+    <ClInclude Include="LinkQueue.h" />
+    <ClInclude Include="LinkStack.h" />
     <ClInclude Include="seqLinkList.h" />
     <ClInclude Include="LinkLoopList.h" />
+    <ClInclude Include="SeqStack.h" />
+    <ClInclude Include="SeQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
