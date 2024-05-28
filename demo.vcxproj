@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ThreadedBinTree.cpp" />
     <ClCompile Include="DoubleLinkLoopList.cpp" />
     <ClCompile Include="LinkLoopList.cpp" />
     <ClCompile Include="LinkQueue.cpp" />
@@ -139,6 +140,7 @@
     <ClCompile Include="SeQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ThreadedBinTree.h" />
     <ClInclude Include="DoubleLinkLoopList.h" />
     <ClInclude Include="LinkQueue.h" />
     <ClInclude Include="LinkStack.h" />
