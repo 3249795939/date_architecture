@@ -92,6 +92,7 @@ void releaseLinkLoopList(LinkLoopList* ptr)
 		cur = cur->next;
 		delete del_node;
 	}
+	delete ptr;
 	ptr = nullptr;
 	std::cout << "All Done!!!";
 }

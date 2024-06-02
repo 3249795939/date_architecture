@@ -24,6 +24,7 @@ static void delThreadedBinTree(ThreadedBinTreeNode* root)
 void releaseThreadedBinTree(ThreadedBinTree* ptr)
 {
 	delThreadedBinTree(ptr->root);
+	delete ptr;
 	std::cout << "Release Down";
 }
 
