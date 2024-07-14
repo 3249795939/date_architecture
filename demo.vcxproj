@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="AVLTree.cpp" />
     <ClCompile Include="BinSearchTree.cpp" />
+    <ClCompile Include="QuickUnion.cpp" />
     <ClCompile Include="ThreadedBinTree.cpp" />
     <ClCompile Include="DoubleLinkLoopList.cpp" />
     <ClCompile Include="LinkLoopList.cpp" />
@@ -144,6 +145,7 @@
   <ItemGroup>
     <ClInclude Include="AVLTree.h" />
     <ClInclude Include="BinSearchTree.h" />
+    <ClInclude Include="QuickUnion.h" />
     <ClInclude Include="ThreadedBinTree.h" />
     <ClInclude Include="DoubleLinkLoopList.h" />
     <ClInclude Include="LinkQueue.h" />
