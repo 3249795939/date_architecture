@@ -57,6 +57,9 @@
     <ClCompile Include="QuickUnion.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="HufSeqTab.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="seqLinkList.h">
@@ -90,6 +93,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="QuickUnion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HufSeqTab.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
