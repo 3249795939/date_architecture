@@ -60,6 +60,12 @@
     <ClCompile Include="HufSeqTab.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="MatrixGraph.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AdjacencyMultiList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="seqLinkList.h">
@@ -96,6 +102,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="HufSeqTab.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixGraph.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AdjacencyMultiList.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

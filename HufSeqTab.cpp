@@ -36,7 +36,7 @@ HufSeqTab createHufSeqTab(unsigned int length, const int* w)
 	}
 	memset(tree, 0, sizeof(HufSeqTabNode) * (size + 1));
 	for (int i = 1; i <= length; i++) {
-		tree[i].weight = w[i-1];
+		tree[i].weight = w[i - 1];
 	}
 
 	for (int i = length + 1; i <= size; i++) {
