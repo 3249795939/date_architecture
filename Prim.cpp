@@ -34,6 +34,7 @@ int Prim(MatrixGraph* g, int start_id, EdgeSet* result)
     int cur_dist = INF;
 
     for (int i = 0; i < num_edge; i++) {
+        cur_dist = INF;
         for (int j = 0; j < g->num_vertex; j++) {
             if (mark[j] && cur_dist < cur_dist) {
                 cur_node = j;
