@@ -66,6 +66,15 @@
     <ClCompile Include="AdjacencyMultiList.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CrossLink.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="kruskal.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Prim.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="seqLinkList.h">
@@ -108,6 +117,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="AdjacencyMultiList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CrossLink.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="kruskal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Prim.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
