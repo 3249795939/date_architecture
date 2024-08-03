@@ -4,13 +4,13 @@
 int Prim(MatrixGraph* g, int start_id, EdgeSet* result)
 {
     int num_edge = g->num_vertex - 1;
-    bool* mark = new bool[g->num_vertex];       //ÊÇ·ñ±»±ê¼ÇÎªÒÑÈ·¶¨½Úµã£¨¼´ÔÚµ±Ç°¹¹ÔìÊ÷ÖĞ£©
-    int* visit = new int[g->num_vertex];        //¸Ã½ÚµãÔÚ×îĞ¡Éú³ÉÊ÷ÖĞµÄ¸¸½Úµã
-    int* dist = new int[g->num_vertex];         //¾àÀë¼¯ºÏµÄ¾àÀë
-    int res = 0;                                //×îĞ¡Éú³ÉÊ÷µÄÈ¨Öµ
+    bool* mark = new bool[g->num_vertex];       //æ˜¯å¦è¢«æ ‡è®°ä¸ºå·²ç¡®å®šèŠ‚ç‚¹ï¼ˆå³åœ¨å½“å‰æ„é€ æ ‘ä¸­ï¼‰
+    int* visit = new int[g->num_vertex];        //è¯¥èŠ‚ç‚¹åœ¨æœ€å°ç”Ÿæˆæ ‘ä¸­çš„çˆ¶èŠ‚ç‚¹
+    int* dist = new int[g->num_vertex];         //è·ç¦»é›†åˆçš„è·ç¦»
+    int res = 0;                                //æœ€å°ç”Ÿæˆæ ‘çš„æƒå€¼
     int idx = 0;
 
-    //³õÊ¼»¯¸¨ÖúÊı×é
+    //åˆå§‹åŒ–è¾…åŠ©æ•°ç»„
 
     for (int i = 0; i < g->num_vertex; i++) {
         mark[i] = false;
@@ -18,7 +18,7 @@ int Prim(MatrixGraph* g, int start_id, EdgeSet* result)
         dist[i] = INF;
     }
 
-    //³õÊ¼Æğµã½Úµã
+    //åˆå§‹èµ·ç‚¹èŠ‚ç‚¹
 
     mark[start_id] = true;
     for (int i = 0; i < g->num_vertex; i++) {
@@ -28,27 +28,28 @@ int Prim(MatrixGraph* g, int start_id, EdgeSet* result)
         }
     }
 
-    //Ñ­»·ÕÒ±ß£¬¹¹Ôì×îĞ¡Éú³ÉÊ÷
+    //å¾ªç¯æ‰¾è¾¹ï¼Œæ„é€ æœ€å°ç”Ÿæˆæ ‘
 
     int cur_node = start_id;
     int cur_dist = INF;
 
     for (int i = 0; i < num_edge; i++) {
+        cur_dist = INF;
         for (int j = 0; j < g->num_vertex; j++) {
             if (mark[j] && cur_dist < cur_dist) {
                 cur_node = j;
                 cur_dist = cur_dist;
             }
         }
-        //½«¸Ãµã±ê¼Ç£¬·ÅÈë¹¹ÔìÊ÷ÖĞ
+        //å°†è¯¥ç‚¹æ ‡è®°ï¼Œæ”¾å…¥æ„é€ æ ‘ä¸­
         mark[cur_node] = true;
-        //ÄÃ¸ÃµãÈ¥¸üĞÂÆäËûÎ´±ê¼Çµã
+        //æ‹¿è¯¥ç‚¹å»æ›´æ–°å…¶ä»–æœªæ ‡è®°ç‚¹
         for (int j = 0; j < g->num_vertex; j++) {
             if (!mark[j] && dist[j] > g->Graph[cur_node][j]) {
                 dist[j] = g->Graph[cur_node][j];
             }
         }
-        //¸üĞÂÈ¨ÖµºÍ±ß¼¯Êı×é
+        //æ›´æ–°æƒå€¼å’Œè¾¹é›†æ•°ç»„
         res += cur_dist;
         result[idx].dest_id = visit[cur_node];
         result[idx].source_id = cur_node;
