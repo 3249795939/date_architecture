@@ -1,14 +1,14 @@
-#include "AdjacencyMultiList.h"
+#include "AdjacencyList.h"
 #include <iostream>
 
 using namespace std;
 
-AdjMultiList* createMultiList(int n)
+AdjList* createMultiList(int n)
 {
-	AdjMultiList* graph = new AdjMultiList;
+	AdjList* graph = new AdjList;
 	graph->node_num = n;
 	graph->flag = new int[n];
-	graph->head_node_set = new AdjMultiListHeadNode[n];
+	graph->head_node_set = new AdjListHeadNode[n];
 	graph->edge_num = 0;
 	graph->dir = 0;
 	for (int i = 0; i < n; i++) {
@@ -19,7 +19,7 @@ AdjMultiList* createMultiList(int n)
 	return graph;
 }
 
-void initAdjMultiList(AdjMultiList* graph, string item_flow[], unsigned int node_num, bool dir)
+void initAdjList(AdjList* graph, string item_flow[], unsigned int node_num, bool dir)
 {
 	graph->dir = dir;
 	for (int i = 0; i < node_num; i++) {
@@ -30,8 +30,8 @@ void initAdjMultiList(AdjMultiList* graph, string item_flow[], unsigned int node
 	return;
 }
 
-static AdjMultiListNode* createAdjMultiListNode(int dest_node_id, int length) {
-	AdjMultiListNode* node = new AdjMultiListNode;
+static AdjListNode* createAdjListNode(int dest_node_id, int length) {
+	AdjListNode* node = new AdjListNode;
 	node->length = length;
 	node->dest_id = dest_node_id;
 	node->next = nullptr;
@@ -39,33 +39,33 @@ static AdjMultiListNode* createAdjMultiListNode(int dest_node_id, int length) {
 	return node;
 }
 
-void addAdjMultiListEdge(int source_node_id, int dest_node_id, AdjMultiList* graph, int length)
+void addAdjListEdge(int source_node_id, int dest_node_id, AdjList* graph, int length)
 {
-	AdjMultiListNode* node = createAdjMultiListNode(dest_node_id, length);
+	AdjListNode* node = createAdjListNode(dest_node_id, length);
 	node->next = graph->head_node_set[source_node_id].next;
 	graph->head_node_set[source_node_id].next = node;
 
 	return;
 }
 
-static void visitNode(adjMultiListHeadNode* node)
+static void visitNode(adjListHeadNode* node)
 {
 	cout << node->name << endl;
 }
 
-void DFSAdjMultiListEdgeTraversal(AdjMultiList* graph, int head_node_idx)
+void DFSAdjListEdgeTraversal(AdjList* graph, int head_node_idx)
 {
-	AdjMultiListHeadNode* cur = &graph->head_node_set[head_node_idx];
+	AdjListHeadNode* cur = &graph->head_node_set[head_node_idx];
 	visitNode(cur);
 	graph->flag[head_node_idx] = true;
-	for (AdjMultiListNode* i = cur->next; i != nullptr; i = i->next) {
+	for (AdjListNode* i = cur->next; i != nullptr; i = i->next) {
 		if (!graph->flag[i->dest_id]) {
-			DFSAdjMultiListEdgeTraversal(graph, i->dest_id);
+			DFSAdjListEdgeTraversal(graph, i->dest_id);
 		}
 	}
 }
 
-void BFSAdjMultiListEdgeTraversal(AdjMultiList* graph, int head_node_idx)
+void BFSAdjListEdgeTraversal(AdjList* graph, int head_node_idx)
 {
 	int queue[MAXNODENUM] = { 0 };
 	int rear = 0, front = 0;
@@ -75,10 +75,10 @@ void BFSAdjMultiListEdgeTraversal(AdjMultiList* graph, int head_node_idx)
 	while (front != rear) {
 		int id = queue[rear++];
 		rear %= MAXNODENUM;
-		AdjMultiListHeadNode* cur = &graph->head_node_set[id];
+		AdjListHeadNode* cur = &graph->head_node_set[id];
 		visitNode(cur);
 		graph->flag[id] = true;
-		for (AdjMultiListNode* i = cur->next; i != nullptr; i = i->next) {
+		for (AdjListNode* i = cur->next; i != nullptr; i = i->next) {
 			int temp_id = i->dest_id;
 			if (!graph->flag[temp_id]) {
 				queue[front++] = temp_id;

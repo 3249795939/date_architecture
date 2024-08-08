@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AdjacencyMultiList.cpp" />
+    <ClCompile Include="AdjacencyList.cpp" />
     <ClCompile Include="AVLTree.cpp" />
     <ClCompile Include="BinSearchTree.cpp" />
     <ClCompile Include="CrossLink.cpp" />
@@ -149,7 +149,7 @@
     <ClCompile Include="SeQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AdjacencyMultiList.h" />
+    <ClInclude Include="AdjacencyList.h" />
     <ClInclude Include="AVLTree.h" />
     <ClInclude Include="BinSearchTree.h" />
     <ClInclude Include="common.h" />

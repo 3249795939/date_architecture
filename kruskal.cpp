@@ -59,7 +59,6 @@ int Kruskal(const MatrixGraph* graph, const EdgeSet* edges, int num, EdgeSet* re
 {
     int num_edge = graph->num_vertex - 1;
     int* set = new int[graph->num_vertex];
-    EdgeSet* result = new EdgeSet[num_edge];
     for (int i = 0; i < graph->num_vertex; i++) {
         set[i] = i;
     }

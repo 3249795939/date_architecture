@@ -12,7 +12,7 @@ typedef struct {
 
 typedef int MatrixGraphEdge;
 
-typedef struct {
+typedef struct matrixGraphy{
 	MatrixGraphEdge Graph[MAXVERNUM][MAXVERNUM];		//图矩阵
 	MatrixGraphVertex MatrixGraphVertexSet[MAXVERNUM];		//顶点集合
 	bool dir;	//是否为有向图
