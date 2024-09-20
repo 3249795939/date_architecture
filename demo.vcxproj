@@ -136,6 +136,7 @@
     <ClCompile Include="MatrixGraph.cpp" />
     <ClCompile Include="Prim.cpp" />
     <ClCompile Include="QuickUnion.cpp" />
+    <ClCompile Include="RBTree.cpp" />
     <ClCompile Include="ThreadedBinTree.cpp" />
     <ClCompile Include="DoubleLinkLoopList.cpp" />
     <ClCompile Include="LinkLoopList.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="MatrixGraph.h" />
     <ClInclude Include="Prim.h" />
     <ClInclude Include="QuickUnion.h" />
+    <ClInclude Include="RBTree.h" />
     <ClInclude Include="ThreadedBinTree.h" />
     <ClInclude Include="DoubleLinkLoopList.h" />
     <ClInclude Include="LinkQueue.h" />
